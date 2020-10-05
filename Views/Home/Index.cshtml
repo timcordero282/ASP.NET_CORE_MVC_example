@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Professor>
+@{ ViewData["Title"] = "All Professors";}
+
+<h2>Professor List</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Professor ID</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Building</th>
+            <th>Office Number</th>
+            <th>Phone</th>
+            <th>Email Address</th>
+            <th>Departmnet</th>
+            <th>Position</th>
+            <th>Discipline</th>
+            <th>Specialty</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var professor in Model)
+        {
+            <tr>
+                <td>@professor.ProfessorID</td>
+                <td>@professor.LastName</td>
+                <td>@professor.FirstName</td>
+                <td>@professor.Building</td>
+                <td>@professor.OfficeNumber</td>
+                <td>@professor.PhoneNumber</td>
+                <td>@professor.EmailAddress</td>
+                <td>@professor.Department</td>
+                <td>@professor.Poistion</td>
+                <td>@professor.Discipline</td>
+                <td>@professor.Specialty</td>
+                <td>
+                    <a asp-controller="Professor" asp-action="Edit" asp-route-id="@professor.ProfessorID"> Edit</a>
+                    <a asp-controller="Professor" asp-action="Delete" asp-route-id="@professor.ProfessorID"> Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
