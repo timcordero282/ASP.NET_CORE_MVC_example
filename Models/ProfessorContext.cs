@@ -26,7 +26,7 @@ namespace Assignment3.Models
                       LastName = "Redmond",
                       Building = "Holroyd",
                       OfficeNumber = "131",
-                      PhoneNumber = "2159511096",
+                      PhoneNumber = "2111111111",
                       EmailAddress = "redmond@lasalle.edu",
                       Department = " Mathematics and Computer Science",
                       Poistion = "Associate Prof"
